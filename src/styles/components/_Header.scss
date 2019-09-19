@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  background: $white;
+  margin-top: 50px;
+  border-top: 10px solid lighten($dark-pink, 5%);
+  border-bottom: 10px solid lighten($dark-pink, 5%);
+  width: 100vw;
+  height: 25vh;
+
+  .header-links {
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      font-family: $text;
+      color: $brown;
+      display: block;
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+
+  .header-logo {
+    position: relative;
+    height: 100%;
+    width: 15vw;
+    img {
+      position: absolute;
+      bottom: -20px;
+      height: 150%;
+      // margin-top: -15%;
+    }
+  }
+  .header-name {
+    position: relative;
+    height: 100%;
+    width: 70vw;
+    text-align: center;
+
+    h1 {
+      font-family: $script;
+      font-size: 5rem;
+      position: relative;
+      top: 20px;
+      color: darken($brown, 10%);
+    }
+  }
+}
