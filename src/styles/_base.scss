@@ -5,12 +5,18 @@ $medium-pink: lighten($dark-pink, 10%);
 $opaque-pink: rgba(240, 146, 189, 0.8);
 $brown: rgba(125, 91, 79, 1);
 $ivory: rgba(234, 221, 220, 1);
-// $white: rgba(252, 245, 248, 1);
 $white: #fdf9fa;
 
 //fonts
 $script: 'Pinyon Script', cursive;
 $text: 'EB Garamond', serif;
+$heading-size: 1.5rem;
+
+//measurements
+$navbar-height: 50px;
+$page-top-padding: 100px;
+
+//_________________________________________________//
 
 * {
   box-sizing: border-box;
@@ -23,17 +29,9 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-image: radial-gradient($light-pink 15%, $white 15%);
-  background-position: 0 0;
-  background-size: 10px 10px;
   color: $very-dark-pink;
 }
 
-.navbar-link {
-  display: inline-block;
-  text-decoration: none;
-  &:hover {
-    transform: translate(-2px, -2px);
-    transition: ease-in 0.2s;
-  }
+h1 {
+  font-size: 2.5rem;
 }

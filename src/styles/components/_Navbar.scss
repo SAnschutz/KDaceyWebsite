@@ -1,6 +1,10 @@
 .navbar {
-  position: relative;
-  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: $navbar-height;
+  width: 100vw;
   padding: 10px 20px 0;
   background: $very-dark-pink;
   text-align: left;
@@ -9,13 +13,19 @@
     display: inline-block;
     text-decoration: none;
     color: $white;
-    font-weight: bold;
+    font-size: 1.5rem;
 
     &:hover {
-      transform: translate(-3px, -2px);
-      transition: ease-in 0.05s;
+      transform: translate(-2px, -2px);
+      transition: ease-in 0.2s;
     }
   }
+
+  &:hover {
+    transform: translate(-3px, -2px);
+    transition: ease-in 0.05s;
+  }
+
   .contact-button {
     float: right;
   }
