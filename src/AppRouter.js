@@ -13,7 +13,7 @@ export const history = createBrowserHistory();
 
 export default function AppRouter() {
   return (
-    <Router history={history}>
+    <Router history={history} basename='/'>
       <Switch>
         <Route path='/' exact={true} component={LandingPage} />
         <Route path='/contact' component={ContactPage} />
