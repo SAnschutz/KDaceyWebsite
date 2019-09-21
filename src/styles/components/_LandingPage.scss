@@ -1,39 +1,46 @@
 .landing-page-body {
   position: relative;
   width: 100vw;
-  height: 70vh;
-  display: flex;
-  flex-flow: row;
-
-  .carousel-container {
-    position: relative;
-    padding-top: 10vh;
-    padding-right: 100px;
-    width: 70vw;
-    height: 100%;
-    align-items: center;
-  }
-
+  height: 60vh;
+  background: $light-pink;
+  // background-image: linear-gradient(
+  //   to right bottom,
+  //   $opaque-pink,
+  //   $opaque-pink
+  // );
+  // clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
   .links {
     position: relative;
-    width: 40vw;
-    height: 100%;
-    padding-top: 10vh;
+    width: 100vw;
+    height: 60px;
+    text-align: left;
+    background: $very-dark-pink;
+    a {
+      display: inline-block;
+      text-align: center;
 
-    ul {
+      padding-top: 15px;
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      width: 25vw;
       height: 100%;
-      width: 40vw;
-      padding-left: 10vw;
-      list-style: none;
+      &:hover {
+        background: lighten($very-dark-pink, 5%);
+        border: 2px solid $very-dark-pink;
+        border-radius: 10px;
+        transform: scale(1.1);
+        transition: ease-in(0.2s);
 
-      li {
-        height: 20%;
-        a {
-          display: block;
-          color: $brown;
-          font-size: 2rem;
-        }
+        // height: 95%;
       }
     }
+  }
+
+  .landing-page-product-image {
+    display: block;
+    margin-bottom: 0;
+    height: 75%;
   }
 }

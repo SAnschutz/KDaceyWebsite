@@ -1,0 +1,22 @@
+.navbar {
+  position: relative;
+  height: 40px;
+  padding: 10px 20px 0;
+  background: $very-dark-pink;
+  text-align: left;
+
+  .navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+
+    &:hover {
+      transform: translate(-3px, -2px);
+      transition: ease-in 0.05s;
+    }
+  }
+  .contact-button {
+    float: right;
+  }
+}
