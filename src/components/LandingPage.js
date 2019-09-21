@@ -12,9 +12,9 @@ export default function LandingPage() {
       <div className='text'>
         <h2>All items made to order! </h2>
         <p>
-          Browse a selection of my previous creations below, then contact me to
-          discuss other design possibilities and get a quote for your custom
-          order!
+          Browse a selection of previous orders below, then contact me to
+          discuss other design possibilities and obtain a quote for your custom
+          order.
         </p>
       </div>
       <div className='links'>
