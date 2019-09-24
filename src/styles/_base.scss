@@ -3,9 +3,16 @@ $dark-pink: rgba(240, 146, 189, 1);
 $very-dark-pink: #e34c8f;
 $medium-pink: lighten($dark-pink, 10%);
 $opaque-pink: rgba(240, 146, 189, 0.8);
-$brown: rgba(125, 91, 79, 1);
+// $brown: rgba(125, 91, 79, 1);
+$brown: lighten(rgb(45, 37, 33), 10%);
 $ivory: rgba(234, 221, 220, 1);
-$white: #fdf9fa;
+$pinkish-white: #fdf9fa;
+$white: #fff;
+
+//complementary colors from color wheel
+$lime-green: #90e34c;
+$teal: #4cd1e3;
+$orange: #e3774c;
 
 //fonts
 $script: 'Pinyon Script', cursive;
@@ -13,8 +20,8 @@ $text: 'EB Garamond', serif;
 $heading-size: 1.5rem;
 
 //measurements
-$navbar-height: 50px;
-$page-top-padding: 100px;
+$navbar-height: 100px;
+$page-top-padding: $navbar-height + 70px;
 
 //_________________________________________________//
 
@@ -30,8 +37,24 @@ body {
   height: 100vh;
   width: 100vw;
   color: $very-dark-pink;
+  background-image: radial-gradient(
+      lighten($opaque-pink, 20%) 20%,
+      transparent 20%
+    ),
+    radial-gradient(lighten($opaque-pink, 20%) 20%, transparent 20%);
+  background-position: 0 0, 15px 15px;
+  background-size: 30px 30px;
+  // background-color: rgba(243, 176, 204, 0.3);
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+img {
+  margin: 50px auto;
+  background: $white;
+  // background: lighten($light-pink, 5%);
+  padding: 20px;
+  border: 1px solid $brown;
 }

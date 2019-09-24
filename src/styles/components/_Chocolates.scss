@@ -1,12 +1,11 @@
 .chocolates-page {
   position: relative;
   text-align: center;
+  padding-top: $page-top-padding;
   padding-bottom: 20px;
-  padding-top: $navbar-height;
-  background: $white;
+
   .product-image {
     height: 350px;
-    margin: auto;
-    padding: 30px;
+    margin: 15px;
   }
 }

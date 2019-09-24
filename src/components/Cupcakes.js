@@ -7,7 +7,7 @@ import Shoes from '../assets/Cupcakes/Shoes.jpeg';
 import Sprinkles from '../assets/Cupcakes/Sprinkles.jpeg';
 
 export default function Cupcakes() {
-  const CupcakeImagesArray = [Flamingos, Mocha, Lemon, Shoes, Sprinkles];
+  const CupcakeImagesArray = [Sprinkles, Mocha, Lemon, Shoes, Flamingos];
   return (
     <div className='cupcakes-page'>
       <Navbar />

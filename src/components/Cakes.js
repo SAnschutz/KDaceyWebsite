@@ -10,6 +10,7 @@ import MagicRabbit2 from '../assets/Cakes/MagicRabbit2.jpeg';
 import Roses from '../assets/Cakes/Roses.jpeg';
 import StrawberryCream from '../assets/Cakes/StrawberryCream.jpeg';
 import Wedding from '../assets/Cakes/Wedding.jpeg';
+import Lime from '../assets/Cakes/LimeCake.jpeg';
 
 export default function Cakes() {
   const CakeImagesArray = [
@@ -22,7 +23,8 @@ export default function Cakes() {
     MagicRabbit2,
     ChocolateBox,
     Wedding,
-    Roses
+    Roses,
+    Lime
   ];
   return (
     <div className='cakes-page'>
