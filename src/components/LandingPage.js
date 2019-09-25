@@ -1,48 +1,52 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
-import defaultImage from '../assets/Cupcakes/Lemon.jpeg';
 import CakeImage from '../assets/Cakes/LimeCake.jpeg';
 import CupcakeImage from '../assets/Cupcakes/Sprinkles.jpeg';
 import CookieImage from '../assets/Cookies/Smileys.jpeg';
 import ChocolateImage from '../assets/Chocolates/PenguinOreos.jpeg';
+import Logo from '../assets/Logo.svg';
 
 export default function LandingPage() {
-  const [image, setImage] = useState(defaultImage);
+  const [image, setImage] = useState(null);
 
   return (
     <div>
       <Navbar />
       <div
         className='landing-page-body'
-        style={{ backgroundImage: `url(${image})` }}
+        style={image && { backgroundImage: `url(${image})` }}
       >
+        <div className='mobile no-tablet'>
+          <img src={Logo} className='mobile-logo' />
+        </div>
+
         <div className='links'>
           <Link
             to='/cakes'
             onMouseOver={() => setImage(CakeImage)}
-            onMouseOut={() => setImage(defaultImage)}
+            onMouseOut={() => setImage(null)}
           >
             Cakes
           </Link>
           <Link
             to='/cupcakes'
             onMouseOver={() => setImage(CupcakeImage)}
-            onMouseOut={() => setImage(defaultImage)}
+            onMouseOut={() => setImage(null)}
           >
             Cupcakes
           </Link>
           <Link
             to='/cookies'
             onMouseOver={() => setImage(CookieImage)}
-            onMouseOut={() => setImage(defaultImage)}
+            onMouseOut={() => setImage(null)}
           >
             Cookies
           </Link>
           <Link
             to='/chocolates'
             onMouseOver={() => setImage(ChocolateImage)}
-            onMouseOut={() => setImage(defaultImage)}
+            onMouseOut={() => setImage(null)}
           >
             Chocolates
           </Link>

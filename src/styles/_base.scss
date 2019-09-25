@@ -21,7 +21,9 @@ $heading-size: 1.5rem;
 
 //measurements
 $navbar-height: 100px;
+$mobile-navbar-height: 70px;
 $page-top-padding: $navbar-height + 40px;
+$mobile-page-top-padding: $mobile-navbar-height + 40px;
 
 //_________________________________________________//
 
@@ -44,7 +46,6 @@ body {
     radial-gradient(lighten($opaque-pink, 20%) 20%, transparent 20%);
   background-position: 0 0, 15px 15px;
   background-size: 30px 30px;
-  // background-color: rgba(243, 176, 204, 0.3);
 }
 
 h1 {
@@ -54,7 +55,32 @@ h1 {
 img {
   margin: 50px auto;
   background: $white;
-  // background: lighten($light-pink, 5%);
   padding: 20px;
   border: 1px solid $brown;
+}
+
+.mobile {
+  visibility: hidden;
+}
+
+@media (max-width: 1025px) {
+  .mobile {
+    visibility: visible;
+  }
+  .tablet {
+    visibility: visible;
+  }
+  .no-tablet {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 700px) {
+  .tablet,
+  .no-tablet {
+    visibility: hidden;
+  }
+  .mobile {
+    visibility: visible;
+  }
 }

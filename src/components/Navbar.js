@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { history } from '../AppRouter';
 import Logo from '../assets/Logo.svg';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { history } from '../AppRouter';
 
 export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -17,11 +17,18 @@ export default function Navbar() {
       {location !== '#/' && (
         <div className='icon'>
           <FontAwesomeIcon
-            className='hamburger'
+            className='hamburger desktop no-tablet'
             icon={faBars}
             onMouseOver={showMenu}
             onMouseOut={hideMenu}
           />
+          <div className='mobile tablet left-arrow'>
+            {' '}
+            <Link to='/'>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </Link>
+          </div>
+
           <div
             className='dropdown-menu'
             onMouseOver={showMenu}
@@ -40,7 +47,13 @@ export default function Navbar() {
         </div>
       )}
 
-      <div className='navbar-logo'>
+      {location === '#/' && (
+        <div className='name mobile no-tablet'>
+          <h1>Kathy Dacey</h1>
+        </div>
+      )}
+
+      <div className='navbar-logo desktop tablet'>
         <Link to='/'>
           <div className='name'>
             <h1>Kathy</h1>
@@ -51,7 +64,7 @@ export default function Navbar() {
           </div>{' '}
         </Link>
       </div>
-      {location !== '/' && (
+      {location !== '#/' && (
         <Link to='/contact' className='contact-button'>
           Contact Me
         </Link>

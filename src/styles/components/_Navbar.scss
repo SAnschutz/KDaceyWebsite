@@ -79,4 +79,27 @@
       transform: translate(-2px, -2px);
     }
   }
+  @media (max-width: 1025px) {
+    .left-arrow {
+      display: inline-block;
+      padding: 20px 0;
+      a {
+        color: $light-pink;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    height: $mobile-navbar-height;
+    .name {
+      h1 {
+        font-family: $script;
+        text-align: center;
+        color: $light-pink;
+        font-size: 36px;
+        padding-top: 10px;
+      }
+    }
+  }
 }

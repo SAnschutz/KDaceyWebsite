@@ -2,11 +2,23 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-image: url('../../assets/Cupcakes/Lemon.jpeg');
   background-repeat: no-repeat;
   background-position: center top $navbar-height;
   background-size: 90vw;
   background-color: lighten($brown, 20%);
   padding-top: $page-top-padding;
+
+  .mobile-logo {
+    width: 30vw;
+    border-radius: 100px;
+    background: $brown;
+    position: fixed;
+    top: $mobile-navbar-height;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 1;
+  }
 
   .links {
     width: 100vw;
@@ -41,7 +53,42 @@
       &:hover {
         color: $light-pink;
         transform: scale(1.1);
-        // text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .links {
+      height: 20vh;
+      padding-top: 25px;
+    }
+    background-image: url('../../assets/Cakes/LimeCake.jpeg');
+    background-position: center top $navbar-height + 50px;
+  }
+
+  @media (max-width: 700px) {
+    background-position: center top $navbar-height + 130px;
+
+    .links {
+      width: 100vw;
+      height: auto;
+      position: absolute;
+      display: relative;
+
+      bottom: 50px;
+      left: 0;
+
+      background-image: none;
+      background-color: transparent;
+      a {
+        display: inline-block;
+        text-align: center;
+        width: 50vw;
+        height: 40px;
+        margin: 1px;
+        padding: 10px 0;
+        border: 2px solid $light-pink;
+        border-radius: 0;
       }
     }
   }
