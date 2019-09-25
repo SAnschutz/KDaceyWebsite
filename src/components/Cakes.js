@@ -14,17 +14,16 @@ import Lime from '../assets/Cakes/LimeCake.jpeg';
 
 export default function Cakes() {
   const CakeImagesArray = [
-    Elegant,
-    Fall,
-    Broadway,
     GermanChocolate,
+    Lime,
     StrawberryCream,
-    MagicRabbit,
-    MagicRabbit2,
     ChocolateBox,
+    Fall,
     Wedding,
     Roses,
-    Lime
+    Broadway,
+    MagicRabbit,
+    MagicRabbit2
   ];
 
   useEffect(() => {
