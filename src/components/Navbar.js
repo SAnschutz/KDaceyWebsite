@@ -11,9 +11,10 @@ export default function Navbar() {
 
   const hideMenu = () => setIsOpenMenu(false);
 
+  const location = window.location.hash;
   return (
     <div className='navbar'>
-      {history.location.pathname !== '/' && (
+      {location !== '#/' && (
         <div className='icon'>
           <FontAwesomeIcon
             className='hamburger'
@@ -50,7 +51,7 @@ export default function Navbar() {
           </div>{' '}
         </Link>
       </div>
-      {history.location.pathname !== '/' && (
+      {location !== '/' && (
         <Link to='/contact' className='contact-button'>
           Contact Me
         </Link>
