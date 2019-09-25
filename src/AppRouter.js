@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Router, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import ContactPage from './components/ContactPage';
 import Cakes from './components/Cakes';
@@ -13,7 +13,7 @@ export const history = createBrowserHistory();
 
 export default function AppRouter() {
   return (
-    <Router history={history} basename='/'>
+    <HashRouter history={history} basename='/'>
       <Switch>
         <Route path='/' exact={true} component={LandingPage} />
         <Route path='/contact' component={ContactPage} />
@@ -22,6 +22,6 @@ export default function AppRouter() {
         <Route path='/cupcakes' component={Cupcakes} />
         <Route path='/chocolates' component={Chocolates} />
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
