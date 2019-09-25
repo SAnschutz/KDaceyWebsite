@@ -5,23 +5,25 @@
   padding-top: $page-top-padding + 50px;
 
   .contact-page-content {
+    display: block;
     background: $white;
     position: relative;
-    height: auto;
     margin: auto;
     width: 80vw;
+    padding: 40px 0;
+    border: 5px double $light-pink;
 
     p {
       font-size: 1.5rem;
       width: 90%;
       margin: 20px auto;
       text-align: center;
+      color: $brown;
 
       a {
-        color: $very-dark-pink;
-
+        color: $brown;
         &:hover {
-          color: $lime-green;
+          color: $dark-pink;
         }
       }
     }
