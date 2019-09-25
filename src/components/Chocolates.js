@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 
 import Bark from '../assets/Chocolates/Bark.jpeg';
@@ -15,6 +15,10 @@ export default function Chocolates() {
     Bark,
     Stirrer
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='chocolates-page'>
       <Navbar />

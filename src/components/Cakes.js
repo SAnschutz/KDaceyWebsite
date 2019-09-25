@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Broadway from '../assets/Cakes/Broadway.jpeg';
 import ChocolateBox from '../assets/Cakes/ChocolateBox.jpeg';
@@ -26,6 +26,11 @@ export default function Cakes() {
     Roses,
     Lime
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='cakes-page'>
       <Navbar />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Flamingos from '../assets/Cupcakes/Flamingos.jpeg';
 import Lemon from '../assets/Cupcakes/Lemon.jpeg';
@@ -8,6 +8,11 @@ import Sprinkles from '../assets/Cupcakes/Sprinkles.jpeg';
 
 export default function Cupcakes() {
   const CupcakeImagesArray = [Sprinkles, Mocha, Lemon, Shoes, Flamingos];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='cupcakes-page'>
       <Navbar />

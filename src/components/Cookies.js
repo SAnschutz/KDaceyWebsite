@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import BasketEasterEggs from '../assets/Cookies/BasketEasterEggs.jpeg';
 import BeachBall from '../assets/Cookies/BeachBall.jpeg';
@@ -18,6 +18,11 @@ export default function Cookies() {
     ChickInEgg,
     BasketEasterEggs
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='cookies-page'>
       <Navbar />
