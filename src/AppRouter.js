@@ -14,14 +14,14 @@ export const history = createBrowserHistory();
 export default function AppRouter() {
   return (
     <HashRouter history={history} basename='/'>
-      <Switch>
+      <div>
         <Route path='/' exact={true} component={LandingPage} />
         <Route path='/contact' component={ContactPage} />
         <Route path='/cakes' component={Cakes} />
         <Route path='/cookies' component={Cookies} />
         <Route path='/cupcakes' component={Cupcakes} />
         <Route path='/chocolates' component={Chocolates} />
-      </Switch>
+      </div>
     </HashRouter>
   );
 }
