@@ -40,16 +40,15 @@ export default function Navbar() {
       )}
 
       <div className='navbar-logo'>
-        <div className='name'>
-          <h1>Kathy</h1>
-        </div>
         <Link to='/'>
+          <div className='name'>
+            <h1>Kathy</h1>
+          </div>
           <img src={Logo} alt='logo' />
+          <div className='name'>
+            <h1>Dacey </h1>
+          </div>{' '}
         </Link>
-
-        <div className='name'>
-          <h1>Dacey </h1>
-        </div>
       </div>
       {history.location.pathname !== '/' && (
         <Link to='/contact' className='contact-button'>
