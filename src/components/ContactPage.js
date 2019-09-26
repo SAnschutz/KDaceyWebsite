@@ -10,7 +10,7 @@ export default function ContactPage() {
         <p>All items are made to order, based on your specific requests.</p>
         <p>
           To discuss design options and get a custom quote, please e-mail me at{' '}
-          <a href='mailto:sanschutz@yahoo.com'>my_email@gmail.com</a>
+          <a href='mailto:kdacey1@gmail.com'>kdacey1@gmail.com</a>
         </p>
       </div>
     </div>

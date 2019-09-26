@@ -20,7 +20,7 @@ $text: 'EB Garamond', serif;
 $heading-size: 1.5rem;
 
 //measurements
-$navbar-height: 100px;
+$navbar-height: 125px;
 $mobile-navbar-height: 70px;
 $page-top-padding: $navbar-height + 40px;
 $mobile-page-top-padding: $mobile-navbar-height + 40px;
@@ -49,14 +49,16 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 img {
   margin: 50px auto;
   background: $white;
+
   padding: 20px;
   border: 1px solid $brown;
+  box-shadow: inset 0 0 0 8px $brown;
 }
 
 .mobile {
