@@ -6,23 +6,12 @@
   background-repeat: no-repeat;
   background-position: center top $navbar-height;
   background-size: 90vw;
-  background-color: lighten($brown, 20%);
+  background-color: lighten($brown, 25%);
   padding-top: $page-top-padding;
-
-  .mobile-logo {
-    width: 30vw;
-    border-radius: 100px;
-    background: $brown;
-    position: fixed;
-    top: $mobile-navbar-height;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    z-index: 1;
-  }
 
   .links {
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -40,15 +29,15 @@
     background-color: rgba(243, 176, 204, 0.5);
     a {
       text-align: center;
-      width: 170px;
-      height: 170px;
-      margin: 10px;
-      padding-top: 70px;
+      width: 190px;
+      height: 190px;
+      margin: 30px;
+      padding-top: 80px;
       border: 5px solid $light-pink;
       border-radius: 100px;
       background: $brown;
       color: $white;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-decoration: none;
       text-transform: uppercase;
       &:hover {
@@ -58,38 +47,46 @@
     }
   }
 
-  @media (max-width: 1025px) {
+  @media screen and (max-width: 1025px) {
     .links {
       height: 20vh;
       padding-top: 25px;
+      a {
+        width: 170px;
+        height: 170px;
+        margin: 10px;
+        padding-top: 70px;
+        font-size: 1.3rem;
+      }
     }
     background-image: url('../../assets/Cakes/LimeCake.jpeg');
     background-position: center top $navbar-height + 50px;
   }
 
-  @media (max-width: 700px) {
-    background-position: center top $navbar-height + 130px;
+  @media screen and (max-width: 700px) {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-position: center top $navbar-height + 80px;
 
     .links {
       width: 100vw;
       height: auto;
-      position: absolute;
-      display: relative;
-
-      bottom: 50px;
-      left: 0;
+      padding: 0 0 20px;
+      display: block;
 
       background-image: none;
       background-color: transparent;
       a {
+        position: relative;
         display: inline-block;
-        text-align: center;
         width: 50vw;
-        height: 40px;
-        margin: 1px;
-        padding: 10px 0;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 0;
         border: 2px solid $light-pink;
-        border-radius: 0;
+        border-radius: 8px;
       }
     }
   }

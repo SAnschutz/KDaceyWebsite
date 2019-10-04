@@ -1,4 +1,5 @@
 $light-pink: rgba(243, 176, 204, 1);
+$lightest-pink: lighten($light-pink, 5%);
 $dark-pink: rgba(240, 146, 189, 1);
 $very-dark-pink: #e34c8f;
 $medium-pink: lighten($dark-pink, 10%);
@@ -9,20 +10,15 @@ $ivory: rgba(234, 221, 220, 1);
 $pinkish-white: #fdf9fa;
 $white: #fff;
 
-//complementary colors from color wheel
-$lime-green: #90e34c;
-$teal: #4cd1e3;
-$orange: #e3774c;
-
 //fonts
 $script: 'Pinyon Script', cursive;
 $text: 'EB Garamond', serif;
-$heading-size: 1.5rem;
 
 //measurements
-$navbar-height: 125px;
-$mobile-navbar-height: 70px;
+$navbar-height: 180px;
 $page-top-padding: $navbar-height + 40px;
+
+$mobile-navbar-height: 150px;
 $mobile-page-top-padding: $mobile-navbar-height + 40px;
 
 //_________________________________________________//
@@ -49,40 +45,20 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
-img {
+.product-image {
   margin: 50px auto;
   background: $white;
-
   padding: 20px;
   border: 1px solid $brown;
-  box-shadow: inset 0 0 0 8px $brown;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
 }
 
-.mobile {
-  visibility: hidden;
+@media screen and (max-width: 1025px) {
 }
 
-@media (max-width: 1025px) {
-  .mobile {
-    visibility: visible;
-  }
-  .tablet {
-    visibility: visible;
-  }
-  .no-tablet {
-    visibility: hidden;
-  }
-}
-
-@media (max-width: 700px) {
-  .tablet,
-  .no-tablet {
-    visibility: hidden;
-  }
-  .mobile {
-    visibility: visible;
-  }
+@media screen and (max-width: 700px) {
 }

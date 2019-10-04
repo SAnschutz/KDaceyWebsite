@@ -18,6 +18,7 @@ export default function Cakes() {
     Lime,
     StrawberryCream,
     ChocolateBox,
+    Elegant,
     Fall,
     Wedding,
     Roses,

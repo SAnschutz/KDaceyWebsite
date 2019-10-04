@@ -6,99 +6,206 @@
   height: $navbar-height;
   width: 100vw;
   background: $brown;
-  border-bottom: 4px double $light-pink;
-  text-align: left;
-  padding-left: 20px;
 
-  .icon {
+  .navbar-content {
     position: relative;
-    width: 125px;
-    .hamburger {
-      display: inline-block;
-      height: 70px;
-      padding-top: 30px;
-      font-size: 1.8rem;
-      color: $light-pink;
-    }
-  }
+    width: 100vw;
+    height: $navbar-height;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    border-bottom: 4px double $light-pink;
 
-  .dropdown-menu {
-    margin-top: -25px;
-    display: inline-block;
-    width: auto;
-    a {
+    .nav-icon {
       display: block;
-      width: 100px;
-      height: 40px;
-      padding: 10px 0 0 10px;
-      background-color: $brown;
-      color: $light-pink;
-      text-decoration: none;
-      border-bottom: 1px solid $light-pink;
-    }
-  }
+      position: relative;
+      width: 20%;
+      height: 100%;
+      .hamburger {
+        display: block;
+        text-align: left;
+        height: 30%;
+        width: 50px;
+        margin-left: 25px;
+        margin-top: $navbar-height/2;
+        transform: translateY(-50%);
+        color: $lightest-pink;
+      }
 
-  .navbar-logo {
-    position: fixed;
-    width: auto;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 20px);
-    .name {
-      display: inline-block;
-      transform: translateY(-125px);
+      .dropdown-menu {
+        display: block;
+        position: relative;
+        margin-top: -35px;
+        margin-left: 25px;
+        width: 100px;
+        text-align: left;
+        a {
+          display: block;
+          width: 140px;
+          height: 70px;
+          padding: 10px 0 0 10px;
+          background-color: $brown;
+          color: $light-pink;
+          font-size: 1.5rem;
+          text-decoration: none;
+          border-bottom: 1px solid $light-pink;
+        }
+      }
     }
-    h1 {
-      display: inline-block;
-      font-family: $script;
-      color: lighten($light-pink, 5%);
-    }
-    img {
-      display: inline-block;
-      height: 170px;
-      width: 170px;
-      background: $brown;
-      border-bottom: 2px solid $light-pink;
-      border-radius: 100px;
-      margin-top: -30px;
-    }
-  }
 
-  .contact-button {
-    position: fixed;
-    top: 35px;
-    right: 20px;
-    background-color: $light-pink;
-    color: $brown;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 2px 10px;
+    .navbar-logo {
+      display: block;
+      position: relative;
+      width: 60%;
+      height: 100%;
+      .name {
+        display: inline-block;
+        position: relative;
+        height: 20px;
+        margin-top: $navbar-height/2;
+        transform: translateY(-$navbar-height);
+        padding: 0 10px;
+        h1 {
+          display: inline-block;
+          position: relative;
+          height: 20px;
+          font-family: $script;
+          color: $lightest-pink;
+        }
+      }
+      img {
+        display: inline-block;
+        height: 130%;
+        margin: 60px auto;
+        padding: 40px;
+        background: $brown;
+        border-bottom: 2px double $light-pink;
 
-    &:hover {
-      transform: translate(-2px, -2px);
+        border-radius: 50%;
+        margin-top: -10px;
+      }
     }
-  }
-  @media (max-width: 1025px) {
-    .left-arrow {
-      display: inline-block;
-      padding: 20px 0;
-      a {
-        color: $light-pink;
-        font-size: 2rem;
+
+    .button-div {
+      position: relative;
+      display: block;
+      width: 20%;
+      text-align: right;
+      .button {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        .contact-button {
+          display: inline-block;
+          position: relative;
+          width: 180px;
+          height: 50px;
+          padding: 10px 15px;
+          text-align: center;
+          margin-top: $navbar-height/2;
+          transform: translateY(-50%);
+          margin-right: 30px;
+          background-color: $lightest-pink;
+          color: $brown;
+          font-size: 28px;
+          text-decoration: none;
+          border-radius: 5px;
+
+          &:hover {
+            transform: translate(-2px, -22px);
+            transition: 0.02s;
+          }
+        }
       }
     }
   }
 
-  @media (max-width: 700px) {
+  @media screen and (max-width: 1025px) {
+    .navbar {
+      .navbar-content {
+        .navbar-logo {
+          width: 100%;
+          a {
+            .name {
+              margin-top: 10px;
+              transform: translateY(0);
+              h1 {
+                height: auto;
+              }
+            }
+            img {
+              display: block;
+              height: 90%;
+              margin: 0 auto;
+              padding: 25px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .nav-icon {
+          width: 25%;
+          .back-arrow {
+            display: block;
+            text-align: left;
+            height: 30%;
+            width: 40px;
+            margin-left: 25px;
+            margin-top: $navbar-height/2;
+            transform: translateY(-50%);
+            color: $lightest-pink;
+          }
+        }
+        .button-div {
+          width: 25%;
+          .button {
+            .contact-button {
+              font-size: 24px;
+              width: 160px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .navbar {
     height: $mobile-navbar-height;
-    .name {
-      h1 {
-        font-family: $script;
-        text-align: center;
-        color: $light-pink;
-        font-size: 36px;
-        padding-top: 10px;
+    .navbar-content {
+      height: $mobile-navbar-height;
+      .navbar-logo {
+        .name {
+          h1 {
+            font-size: 2.5rem;
+          }
+          img {
+            height: 80%;
+            padding: 25px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .nav-icon {
+        height: 100%;
+        width: 50%;
+      }
+      .button-div {
+        width: auto;
+        text-align: right;
+        .button {
+          width: 100%;
+          .contact-button {
+            width: 180px;
+            margin-top: $mobile-navbar-height/2;
+            margin-right: 0;
+            //hack -- fix:
+            margin-left: 20vw;
+          }
+        }
       }
     }
   }

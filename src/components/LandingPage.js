@@ -5,7 +5,6 @@ import CakeImage from '../assets/Cakes/LimeCake.jpeg';
 import CupcakeImage from '../assets/Cupcakes/Sprinkles.jpeg';
 import CookieImage from '../assets/Cookies/Smileys.jpeg';
 import ChocolateImage from '../assets/Chocolates/PenguinOreos.jpeg';
-import Logo from '../assets/Logo.svg';
 
 export default function LandingPage() {
   const [image, setImage] = useState(null);
@@ -17,10 +16,6 @@ export default function LandingPage() {
         className='landing-page-body'
         style={image && { backgroundImage: `url(${image})` }}
       >
-        <div className='mobile no-tablet'>
-          <img src={Logo} className='mobile-logo' />
-        </div>
-
         <div className='links'>
           <Link
             to='/cakes'
